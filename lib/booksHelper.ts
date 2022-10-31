@@ -1,6 +1,6 @@
 export const getAllBooks = async () => {
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_APP_API_SERVER}/books`
+    `${process.env.NEXT_PUBLIC_LOCAL_API_SERVER}/books`
   );
 
   if (!response.ok) {
@@ -13,7 +13,7 @@ export const getAllBooks = async () => {
 export const getBook = async ({ queryKey }: any) => {
   const [_key, { id }] = queryKey;
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_APP_API_SERVER}/books/${id}`
+    `${process.env.NEXT_PUBLIC_LOCAL_API_SERVER}/books/${id}`
   );
 
   if (!response.ok) {
@@ -26,7 +26,7 @@ export const getBook = async ({ queryKey }: any) => {
 
 export const updateBook = async ({ id, ...data }: any) => {
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_APP_API_SERVER}/books/${id}`,
+    `${process.env.NEXT_PUBLIC_LOCAL_API_SERVER}/books/${id}`,
     {
       method: 'PUT',
       headers: {
@@ -46,7 +46,7 @@ export const updateBook = async ({ id, ...data }: any) => {
 
 export const removeBook = async (id: any) => {
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_APP_API_SERVER}/books/${id}`,
+    `${process.env.NEXT_PUBLIC_LOCAL_API_SERVER}/books/${id}`,
     {
       method: 'DELETE',
     }
@@ -62,7 +62,7 @@ export const removeBook = async (id: any) => {
 
 export const createBook = async (data: any) => {
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_APP_API_SERVER}/books`,
+    `${process.env.NEXT_PUBLIC_LOCAL_API_SERVER}/books`,
     {
       method: 'POST',
       headers: {
