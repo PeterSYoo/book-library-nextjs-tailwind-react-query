@@ -33,7 +33,9 @@ const UpdateBook = () => {
   return (
     <>
       <div className="flex flex-col gap-4">
-        <h1>Update Book</h1>
+        <div className="border-b border-gray-300 pb-2">
+          <h1>Update Book</h1>
+        </div>
         <BookForm
           defaultValues={data}
           onFormSubmit={onFormSubmit}

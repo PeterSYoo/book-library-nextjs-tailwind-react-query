@@ -15,7 +15,9 @@ const CreateBook = () => {
   return (
     <>
       <div className="flex flex-col gap-3">
-        <h1>Create New Book</h1>
+        <div className="border-b border-gray-300 pb-2">
+          <h1>Create New Book</h1>
+        </div>
         <BookForm onFormSubmit={onFormSubmit} isLoading={isLoading} />
       </div>
     </>
